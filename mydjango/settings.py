@@ -163,5 +163,6 @@ EMAIL_HOST_PASSWORD = 'qwe050641'
 #DEFAULT_FROM_EMAIL = 'liangchu1310@163.com'
 DEFAULT_FROM_EMAIL = 'xiaoliang <liangchu1310@163.com>'
 
+# SESSION配置，存储到文件中
 SESSION_ENGINE = 'django.contrib.sessions.backends.file'
 SESSION_FILE_PATH  = '/tmp/sessions'
