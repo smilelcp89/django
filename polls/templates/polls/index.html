@@ -1,0 +1,39 @@
+投票首页
+<h3>单个变量：name</h3>
+{{ name }}
+<br/>
+{{ request.GET.name }}
+<h3>
+    for i in fruit
+    endfor
+</h3>
+{% for i in fruit %}
+    {{ i }}<br/>
+{% endfor %}
+
+<h3>多层嵌套循环</h3>
+{% for item in food %}
+    {% for row in item.data %}
+        {{ row.itemdate }} ========= {{ row.type }}<br/>
+    {% endfor %}
+{% endfor %}
+
+<h3>使用下标索引输出列表中值: fruit.0</h3>
+{{ fruit.0 }}
+
+<h3>使用下标名称输出dict中值: person.name</h3>
+{{ person.name }}<br/>
+{{ person.age }}
+
+<h3>使用循环最后的一个值，forloop.last</h3>
+{% for i in number %}
+    {{ i }}{% if not forloop.last %},{% endif %}
+    == {{ forloop.counter }} <br/>
+{% endfor %}
+
+<h3>获取GET参数</h3>
+{{ request.GET.urlencode }}
+<br/>
+{{ request.user }}
+<h3>动态生成url：使用url</h3>
+{% url 'detail' 3 %}

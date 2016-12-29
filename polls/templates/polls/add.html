@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<body>
+<p>{{ myname }}</p>
+ 
+<form action="{% url 'add' %}" method="post">
+	{% csrf_token %}
+    问题: <input type="text" name="question">     
+    <input type="submit" value="提交">
+</form>
+ 
+ 
+</body>
+</html>
